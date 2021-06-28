@@ -64,6 +64,7 @@ customEnv: {}
   # KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
   # CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "localhost:9092"
 
+
 persistence:
   enabled: true
 
@@ -81,6 +82,7 @@ persistence:
   # storageClass: ""
 
   disksPerBroker: 1
+
 
 ## Kafka JVM Heap Option
 heapOptions: "-Xms512M -Xmx512M"
@@ -117,6 +119,18 @@ affinity: {}
 ## ref: https://docs.confluent.io/current/kafka/monitoring.html
 jmx:
   port: 5555
+
+# Extra volume mounts
+# extraVolumeMounts:
+# - mountPath: /tmp/some/folder
+#   name: some_folder
+#extraVolumeMounts: {}
+
+# Extra mounts
+# extraVolumes:
+# - emptyDir: {}
+#   name: some_folder
+#extraVolumes: {}
 
 ## Prometheus Exporter Configuration
 ## ref: https://prometheus.io/docs/instrumenting/exporters/
